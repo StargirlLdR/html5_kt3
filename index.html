@@ -1,0 +1,64 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мультимедиа приложение</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="audio-video">
+        <h2>Аудио и Видео</h2>
+        <div id="media">
+            <audio id="audioPlayer" controls>
+            <source src="Gracie Abrams - Thats So True.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает элемент <code>audio</code>.
+            </audio>
+            <button id="playAudio">Воспроизвести</button>
+            <button id="pauseAudio">Пауза</button>
+            <label for="audioVolume">Громкость:</label>
+            <input id="audioVolume" type="range" min="0" max="1" step="0.1">
+            <label for="audioSeek">Перемотка:</label>
+            <input id="audioSeek" type="range" value="0" step="1">
+
+            <video id="videoPlayer" width="400" controls>
+            <source src="6897191488180.mp4" type="video/mp4">
+            Ваш браузер не поддерживает элемент <code>video</code>.
+            </video>git branch -M main
+            <button id="playVideo">Воспроизвести</button>
+            <button id="pauseVideo">Пауза</button>
+            <label for="videoVolume">Громкость:</label>
+            <input id="videoVolume" type="range" min="0" max="1" step="0.1">
+            <label for="videoSeek">Перемотка:</label>
+            <input id="videoSeek" type="range" value="0" step="1">
+        </div>
+    </section>
+    <section id="graphics-animation">
+        <h2>Графика и Анимация</h2>
+        <canvas id="animationCanvas" width="800" height="400"></canvas>
+        <div>
+            <label for="speed">Скорость:</label>
+            <input type="range" id="speed" min="1" max="10" step="1" value="5">
+        </div>
+    </section>
+
+    <section id="image-processing">
+        <h2>Работа с Изображениями</h2>
+        <input type="file" id="uploadImage" accept="image/*" />
+        <br><br>
+        <div>
+        <label>Ширина: <input type="number" id="resizeWidth" value="500" /> px</label>
+        <label>Высота: <input type="number" id="resizeHeight" value="500" /> px</label>
+        <button id="resizeImage">Изменить размер</button>
+        </div>
+        <br>
+        <div>
+        <label><input type="checkbox" id="invertColors" /> Применить фильтр инверсии цвета</label>
+        </div>
+        <br>
+        <canvas id="imageCanvas" width="500" height="500"></canvas>
+        <br>
+        <button id="saveImage">Сохранить изображение</button>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
